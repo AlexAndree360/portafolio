@@ -1,4 +1,5 @@
 <title>Alex Velásquez Ortiz</title>
+<meta name="description" content="Gerente BIM/VDC. Infraestructura hospitalaria fast-track bajo contratos NEC. Cartera documentada de S/ 4.896 millones.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -9,7 +10,6 @@
   --acero:#1B3A4B; --tinta-2:#5C6A6E; --tinta-3:#7C888B;
   --linea:#D9DEDB; --linea-s:#E7EAE7;
   --obra:#C8500C; --obra-s:#E0824A; --obra-bg:#F8EAE0;
-  --acero-bg:#E6EDF1;
   --display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --texto:"Source Serif 4",Georgia,"Times New Roman",serif;
   --mono:"IBM Plex Mono","SF Mono",Consolas,monospace;
@@ -20,7 +20,6 @@
     --acero:#8FB8CE; --tinta-2:#98A5A8; --tinta-3:#7C888B;
     --linea:#2B333A; --linea-s:#232A30;
     --obra:#E8894C; --obra-s:#B87340; --obra-bg:#2B1B11;
-    --acero-bg:#16232C;
   }
 }
 :root[data-theme="dark"]{
@@ -28,205 +27,19 @@
   --acero:#8FB8CE; --tinta-2:#98A5A8; --tinta-3:#7C888B;
   --linea:#2B333A; --linea-s:#232A30;
   --obra:#E8894C; --obra-s:#B87340; --obra-bg:#2B1B11;
-  --acero-bg:#16232C;
 }
 
 *{box-sizing:border-box}
-body{
-  background:var(--papel);color:var(--tinta);font-family:var(--texto);
-  font-size:16px;line-height:1.62;margin:0;-webkit-font-smoothing:antialiased;
-}
-.hoja{max-width:64rem;margin:0 auto;padding:3.2rem 2rem 5rem}
+body{background:var(--papel);color:var(--tinta);font-family:var(--texto);
+  font-size:16px;line-height:1.62;margin:0;-webkit-font-smoothing:antialiased}
+.hoja{max-width:64rem;margin:0 auto;padding:2.4rem 2rem 5rem}
 p{margin:0}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
 
-/* ---------- encabezado ---------- */
-.masthead{border-bottom:2px solid var(--acero);padding-bottom:1.15rem}
-.diana{
-  font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
-  letter-spacing:.12em;color:var(--obra);margin:0 0 .75rem;
-}
-.nombre{
-  font-family:var(--display);font-weight:700;
-  font-size:clamp(2.1rem,5.8vw,3.3rem);line-height:1.02;letter-spacing:-.022em;
-  color:var(--acero);margin:0 0 .55rem;
-}
-.rol{font-family:var(--display);font-weight:500;font-size:clamp(.98rem,2vw,1.15rem);margin:0 0 .3rem}
-.subrol{font-family:var(--display);font-size:.9rem;color:var(--tinta-2);margin:0}
-.contacto{
-  font-family:var(--mono);font-size:.78rem;color:var(--tinta-2);
-  margin:1.15rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;
-}
-.contacto a{text-decoration:none;border-bottom:1px solid var(--linea);transition:color .15s,border-color .15s}
-.contacto a:hover{color:var(--obra);border-bottom-color:var(--obra)}
-
-/* ---------- perfil ---------- */
-.perfil{margin-top:2.2rem;display:flex;flex-direction:column;gap:.85rem}
-.perfil p{max-width:44rem;font-size:1rem}
-.perfil b{font-weight:600;color:var(--acero)}
-
-/* ---------- cifras ---------- */
-.escala{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));
-  gap:1px;background:var(--linea);border:1px solid var(--linea);margin-top:2.2rem;
-}
-.escala>div{background:var(--sup);padding:1.05rem 1.1rem}
-.escala .n{
-  font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3.2vw,1.85rem);
-  letter-spacing:-.028em;color:var(--acero);font-variant-numeric:tabular-nums;
-  display:block;line-height:1.1;
-}
-.escala .n small{font-size:.52em;font-weight:600;color:var(--tinta-3);letter-spacing:0}
-.escala .k{
-  font-family:var(--mono);font-size:.64rem;text-transform:uppercase;
-  letter-spacing:.1em;color:var(--tinta-3);display:block;margin-top:.35rem;
-}
-
-/* ---------- secciones ---------- */
-section{margin-top:2.9rem}
-h2{
-  font-family:var(--display);font-size:.78rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.16em;color:var(--acero);
-  margin:0 0 1.15rem;padding-bottom:.5rem;border-bottom:1px solid var(--linea);
-  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;
-}
-h2 em{font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;
-  color:var(--tinta-3);text-transform:none;font-weight:400}
-
-/* ---------- gantt ---------- */
-.gantt{border:1px solid var(--linea);background:var(--sup);overflow-x:auto}
-.gantt-in{min-width:44rem}
-.ganios{display:grid;grid-template-columns:repeat(10,1fr);background:var(--banda);border-bottom:1px solid var(--linea)}
-.ganios span{
-  font-family:var(--mono);font-size:.64rem;color:var(--tinta-3);
-  padding:.42rem .45rem;border-left:1px solid var(--linea-s);
-}
-.ganios span:first-child{border-left:0}
-.gfila{display:grid;grid-template-columns:14rem 1fr;border-bottom:1px solid var(--linea-s);align-items:center}
-.gfila:last-child{border-bottom:0}
-.gfila:hover{background:var(--banda)}
-.gcab{display:grid;grid-template-columns:14rem 1fr;border-bottom:1px solid var(--linea)}
-.gcab>span{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;
-  color:var(--tinta-3);padding:.42rem .8rem;background:var(--banda)}
-.gnom{padding:.6rem .8rem;border-right:1px solid var(--linea-s)}
-.gnom b{font-family:var(--display);font-weight:600;font-size:.82rem;display:block;line-height:1.25}
-.gnom span{font-family:var(--mono);font-size:.66rem;color:var(--tinta-3)}
-.gpista{position:relative;height:2.6rem}
-.gpista::before{
-  content:"";position:absolute;inset:0;
-  background:repeating-linear-gradient(to right,var(--linea-s) 0 1px,transparent 1px 10%);
-}
-.gbarra{
-  position:absolute;top:50%;transform:translateY(-50%);height:.85rem;
-  background:var(--acero);display:flex;align-items:center;padding:0 .4rem;min-width:5px;border-radius:2px;
-}
-.gbarra.act{background:var(--obra)}
-.gbarra span{font-family:var(--mono);font-size:.58rem;color:#fff;white-space:nowrap;letter-spacing:.02em}
-.ghoy{position:absolute;top:0;bottom:0;width:2px;background:var(--obra)}
-
-/* ---------- experiencia con ledger ---------- */
-.puesto{
-  display:grid;grid-template-columns:14.5rem 1fr;gap:0 2.2rem;
-  padding:1.5rem 0;border-bottom:1px solid var(--linea-s);
-}
-.puesto:last-of-type{border-bottom:0}
-.ledger{
-  font-family:var(--mono);font-size:.73rem;line-height:1.5;color:var(--tinta-2);
-  display:flex;flex-direction:column;gap:.5rem;
-  border-left:2px solid var(--linea);padding-left:.85rem;
-}
-.puesto.nec .ledger{border-left-color:var(--obra-s)}
-.ledger .periodo{color:var(--tinta);font-weight:600;font-size:.79rem}
-.ledger dt{text-transform:uppercase;letter-spacing:.06em;font-size:.61rem;color:var(--tinta-3)}
-.ledger dd{margin:0;color:var(--tinta)}
-.ledger .monto{color:var(--obra);font-weight:600;font-variant-numeric:tabular-nums}
-.puesto h3{font-family:var(--display);font-size:1.02rem;font-weight:600;color:var(--acero);margin:0 0 .1rem;line-height:1.3}
-.puesto .emp{font-family:var(--display);font-size:.88rem;font-weight:500;color:var(--obra);margin:0 0 .45rem}
-.puesto .proy{font-size:.88rem;color:var(--tinta-2);font-style:italic;margin:0 0 .7rem}
-.puesto ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.42rem}
-.puesto li{position:relative;padding-left:1.05rem;font-size:.94rem}
-.puesto li::before{content:"";position:absolute;left:0;top:.62em;width:.38rem;height:1px;background:var(--obra-s)}
-.tag{
-  display:inline-block;font-family:var(--display);font-size:.6rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.08em;color:var(--sup);background:var(--acero);
-  padding:.15rem .45rem;border-radius:2px;vertical-align:.16em;margin-left:.4rem;
-}
-.tag.viva{background:var(--obra)}
-
-/* ---------- fichas de establecimientos ---------- */
-.fichas{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem}
-.ficha{border:1px solid var(--linea);border-left:3px solid var(--obra);padding:.75rem .85rem;background:var(--sup)}
-.ficha b{font-family:var(--display);font-size:.84rem;color:var(--acero);display:block;line-height:1.3}
-.ficha .lugar{font-size:.73rem;color:var(--tinta-2);display:block;margin-bottom:.4rem}
-.ficha .lvl{font-family:var(--mono);font-size:.68rem;font-weight:600;color:var(--obra);display:block}
-.ficha em{font-style:normal;font-size:.72rem;color:var(--tinta-2);display:block}
-
-/* ---------- dimensiones BIM ---------- */
-.dims{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea)}
-.dim{background:var(--sup);padding:1rem 1.05rem}
-.dim b{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--obra);letter-spacing:-.03em;display:block;line-height:1}
-.dim h4{font-family:var(--display);font-size:.86rem;font-weight:600;color:var(--acero);margin:.4rem 0 .35rem}
-.dim p{font-size:.82rem;color:var(--tinta-2);line-height:1.5}
-
-/* ---------- productos ---------- */
-.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.2rem}
-.prod{border:1px solid var(--linea);background:var(--sup);padding:1.3rem;display:flex;flex-direction:column;gap:.7rem}
-.prod-cab{display:flex;align-items:center;gap:.6rem}
-.prod h3{font-family:var(--display);font-size:1.2rem;font-weight:700;color:var(--acero);letter-spacing:-.02em}
-.estado{font-family:var(--mono);font-size:.61rem;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;margin-left:auto;border-radius:2px}
-.estado.vivo{background:var(--obra);color:#fff}
-.estado.curso{background:var(--banda);color:var(--tinta-2);border:1px solid var(--linea)}
-.prod>p{font-size:.92rem;color:var(--tinta-2)}
-.prod ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.prod li{position:relative;padding-left:1.05rem;font-size:.87rem;color:var(--tinta-2)}
-.prod li::before{content:"";position:absolute;left:0;top:.62em;width:.38rem;height:1px;background:var(--obra-s)}
-.prod li b{color:var(--tinta);font-weight:600}
-
-/* ---------- formación y competencias ---------- */
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.6rem 3rem}
-.subhead{font-family:var(--display);font-size:.7rem;font-weight:600;text-transform:uppercase;
-  letter-spacing:.1em;color:var(--tinta-3);margin:0 0 .8rem}
-.estudio{display:flex;gap:.9rem;align-items:baseline;margin-bottom:.8rem}
-.estudio .yr{font-family:var(--mono);font-size:.77rem;font-weight:600;color:var(--obra);flex:0 0 2.6rem}
-.estudio .txt b{font-family:var(--display);font-weight:600;font-size:.88rem;color:var(--acero);display:block;line-height:1.3}
-.estudio .txt em{font-style:normal;color:var(--tinta-2);font-size:.83rem}
-.comp{margin-bottom:.85rem;font-size:.93rem;max-width:46rem}
-.comp b{font-family:var(--display);font-weight:600;font-size:.83rem;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--acero);display:block;margin-bottom:.15rem}
-
-footer{border-top:2px solid var(--acero);margin-top:3rem;padding-top:1.2rem;
-  display:flex;gap:1.5rem;flex-wrap:wrap;align-items:baseline}
-footer .id{font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--acero)}
-footer .meta{font-family:var(--mono);font-size:.73rem;color:var(--tinta-3);margin-left:auto}
-
-a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-
-@media (max-width:760px){
-  .hoja{padding:2.2rem 1.15rem 3rem}
-  .puesto{grid-template-columns:1fr;gap:.9rem}
-  .ledger{flex-direction:row;flex-wrap:wrap;gap:.3rem 1.3rem}
-}
-@media print{
-  body{background:#fff}
-  .hoja{max-width:none;padding:0}
-  .puesto,section,.gantt,.ficha,.prod{break-inside:avoid}
-  .gbarra,.ghoy,.ficha,.escala>div,.tag,.estado{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-}
-
-.abrir{
-  display:inline-block;font-family:var(--mono);font-size:.73rem;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--obra);text-decoration:none;
-  border:1px solid var(--obra);padding:.4rem .75rem;border-radius:2px;
-  transition:background .15s,color .15s;
-}
-.abrir:hover{background:var(--obra);color:#fff}
-@media print{.abrir{display:none}}
-
 /* ---------- barra de acceso ----------
-   Va arriba y se queda: entrar a la app es lo que mas se repite y no puede
-   depender de bajar hasta la ficha del producto. */
+   Entrar a la app es lo que más se repite de esta página: va arriba y se
+   queda, no enterrado en la ficha del producto. */
 .barra{position:sticky;top:0;z-index:30;background:var(--papel);border-bottom:1px solid var(--linea)}
 .barra-in{max-width:64rem;margin:0 auto;padding:.6rem 2rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
 .barra-id{font-family:var(--display);font-weight:600;font-size:.86rem;color:var(--acero);white-space:nowrap}
@@ -240,13 +53,216 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   background:var(--obra);color:#fff;text-decoration:none;padding:.44rem .85rem;border-radius:2px;
   white-space:nowrap;transition:background .15s}
 .barra-app:hover{background:var(--obra-s);color:#fff}
-.hoja{padding-top:2.4rem}
+
+/* ---------- encabezado ---------- */
+.masthead{border-bottom:2px solid var(--acero);padding-bottom:1.15rem;
+  display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:start}
+.retrato{width:8.5rem;height:8.5rem;object-fit:cover;object-position:center top;
+  border:1px solid var(--linea);border-radius:2px;background:var(--banda)}
+.diana{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--obra);margin:0 0 .75rem}
+.nombre{font-family:var(--display);font-weight:700;
+  font-size:clamp(2rem,5.4vw,3.1rem);line-height:1.02;letter-spacing:-.022em;
+  color:var(--acero);margin:0 0 .55rem}
+.rol{font-family:var(--display);font-weight:500;font-size:clamp(.96rem,2vw,1.12rem);margin:0 0 .3rem}
+.subrol{font-family:var(--display);font-size:.88rem;color:var(--tinta-2);margin:0}
+.contacto{font-family:var(--mono);font-size:.77rem;color:var(--tinta-2);
+  margin:1.1rem 0 0;display:flex;flex-wrap:wrap;gap:.35rem 1.4rem}
+.contacto a{text-decoration:none;border-bottom:1px solid var(--linea);transition:color .15s,border-color .15s}
+.contacto a:hover{color:var(--obra);border-bottom-color:var(--obra)}
+
+/* ---------- perfil ---------- */
+.perfil{margin-top:2.2rem;display:flex;flex-direction:column;gap:.85rem}
+.perfil p{max-width:44rem;font-size:1rem}
+.perfil b{font-weight:600;color:var(--acero)}
+
+/* ---------- cifras ---------- */
+.escala{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));
+  gap:1px;background:var(--linea);border:1px solid var(--linea);margin-top:2.2rem}
+.escala>div{background:var(--sup);padding:1.05rem 1.1rem}
+.escala .n{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,3.1vw,1.8rem);
+  letter-spacing:-.028em;color:var(--acero);font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.escala .n small{font-size:.52em;font-weight:600;color:var(--tinta-3);letter-spacing:0}
+.escala .k{font-family:var(--mono);font-size:.63rem;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--tinta-3);display:block;margin-top:.35rem}
+
+/* ---------- secciones ---------- */
+section{margin-top:2.9rem}
+h2{font-family:var(--display);font-size:.78rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--acero);
+  margin:0 0 1.15rem;padding-bottom:.5rem;border-bottom:1px solid var(--linea);
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+h2 em{font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;
+  color:var(--tinta-3);text-transform:none;font-weight:400}
+
+/* ---------- logros ---------- */
+.logros{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.logro{border:1px solid var(--linea);border-left:3px solid var(--obra);background:var(--sup);padding:1.1rem 1.2rem}
+.logro .cifra{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--obra);
+  letter-spacing:-.028em;font-variant-numeric:tabular-nums;display:block;line-height:1.1}
+.logro .cifra small{font-size:.55em;font-weight:600;color:var(--tinta-3)}
+.logro p{font-size:.86rem;color:var(--tinta-2);margin-top:.4rem;line-height:1.5}
+
+/* ---------- gantt ---------- */
+.gantt{border:1px solid var(--linea);background:var(--sup);overflow-x:auto}
+.gantt-in{min-width:48rem}
+.ganios{display:grid;grid-template-columns:repeat(13,1fr);background:var(--banda);border-bottom:1px solid var(--linea)}
+.ganios span{font-family:var(--mono);font-size:.6rem;color:var(--tinta-3);
+  padding:.42rem .3rem;border-left:1px solid var(--linea-s)}
+.ganios span:first-child{border-left:0}
+.gfila{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea-s);align-items:center}
+.gfila:last-child{border-bottom:0}
+.gfila:hover{background:var(--banda)}
+.gcab{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea)}
+.gcab>span{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--tinta-3);padding:.42rem .8rem;background:var(--banda)}
+.gnom{padding:.55rem .8rem;border-right:1px solid var(--linea-s)}
+.gnom b{font-family:var(--display);font-weight:600;font-size:.79rem;display:block;line-height:1.25}
+.gnom span{font-family:var(--mono);font-size:.63rem;color:var(--tinta-3)}
+.gpista{position:relative;height:2.4rem}
+.gpista::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(to right,var(--linea-s) 0 1px,transparent 1px 7.6923%)}
+.gbarra{position:absolute;top:50%;transform:translateY(-50%);height:.8rem;
+  background:var(--acero);display:flex;align-items:center;padding:0 .35rem;min-width:5px;border-radius:2px}
+.gbarra.act{background:var(--obra)}
+.gbarra.suave{background:var(--tinta-3)}
+.gbarra span{font-family:var(--mono);font-size:.56rem;color:#fff;white-space:nowrap;letter-spacing:.02em}
+.ghoy{position:absolute;top:0;bottom:0;width:2px;background:var(--obra)}
+/* Hitos verticales que cruzan todo el cuadro: el título y la colegiatura no
+   son un puesto, son la fecha desde la que cuenta el ejercicio. */
+.ghito{position:absolute;top:0;bottom:0;width:0;border-left:1.5px dashed var(--acero);opacity:.65}
+.ghitos{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea);background:var(--banda)}
+.ghitos-pista{position:relative;height:1.5rem}
+.ghitos-pista b{position:absolute;transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--acero);top:.28rem}
+.ghitos>span{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--tinta-3);padding:.4rem .8rem;border-right:1px solid var(--linea-s)}
+
+/* ---------- filtros ---------- */
+.filtros{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.filtro{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:.38rem .75rem;border:1px solid var(--linea);background:var(--sup);color:var(--tinta-2);
+  cursor:pointer;border-radius:2px;transition:border-color .15s,color .15s,background .15s}
+.filtro:hover{border-color:var(--obra);color:var(--obra)}
+.filtro[aria-pressed="true"]{background:var(--acero);border-color:var(--acero);color:#fff}
+.filtro:focus-visible{outline:2px solid var(--obra);outline-offset:2px}
+.filtro .cuenta{opacity:.65;margin-left:.35rem}
+[hidden]{display:none!important}
+.vacio-filtro{font-family:var(--mono);font-size:.8rem;color:var(--tinta-3);padding:1rem 0}
+
+/* ---------- experiencia con ledger ---------- */
+.puesto{display:grid;grid-template-columns:14.5rem 1fr;gap:0 2.2rem;
+  padding:1.5rem 0;border-bottom:1px solid var(--linea-s)}
+.puesto:last-of-type{border-bottom:0}
+.ledger{font-family:var(--mono);font-size:.73rem;line-height:1.5;color:var(--tinta-2);
+  display:flex;flex-direction:column;gap:.5rem;
+  border-left:2px solid var(--linea);padding-left:.85rem}
+.puesto.nec .ledger{border-left-color:var(--obra-s)}
+.ledger .periodo{color:var(--tinta);font-weight:600;font-size:.79rem}
+.ledger dt{text-transform:uppercase;letter-spacing:.06em;font-size:.61rem;color:var(--tinta-3)}
+.ledger dd{margin:0;color:var(--tinta)}
+.ledger .monto{color:var(--obra);font-weight:600;font-variant-numeric:tabular-nums}
+.puesto h3{font-family:var(--display);font-size:1.02rem;font-weight:600;color:var(--acero);margin:0 0 .1rem;line-height:1.3}
+.puesto .emp{font-family:var(--display);font-size:.88rem;font-weight:500;color:var(--obra);margin:0 0 .45rem}
+.puesto .proy{font-size:.88rem;color:var(--tinta-2);font-style:italic;margin:0 0 .7rem}
+.puesto ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.42rem}
+.puesto li{position:relative;padding-left:1.05rem;font-size:.94rem}
+.puesto li::before{content:"";position:absolute;left:0;top:.62em;width:.38rem;height:1px;background:var(--obra-s)}
+.tag{display:inline-block;font-family:var(--display);font-size:.6rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--sup);background:var(--acero);
+  padding:.15rem .45rem;border-radius:2px;vertical-align:.16em;margin-left:.4rem}
+.tag.viva{background:var(--obra)}
+
+/* ---------- cartera ---------- */
+.tablawrap{overflow-x:auto;border:1px solid var(--linea)}
+table{border-collapse:collapse;width:100%;min-width:44rem;background:var(--sup)}
+thead th{background:var(--acero);color:#fff;font-family:var(--display);font-size:.66rem;
+  font-weight:600;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:.6rem .8rem;white-space:nowrap}
+tbody td{padding:.55rem .8rem;font-size:.85rem;border-top:1px solid var(--linea-s);vertical-align:top}
+tbody tr:nth-of-type(even) td{background:var(--banda)}
+td.pr{font-family:var(--display);font-weight:600;font-size:.83rem;color:var(--acero)}
+td.mo{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  font-size:.82rem;font-weight:600;color:var(--obra);white-space:nowrap}
+td.dl{font-family:var(--mono);font-size:.75rem;color:var(--tinta-2);text-align:right;white-space:nowrap}
+td.mk{font-family:var(--mono);font-size:.72rem;color:var(--tinta-2)}
+.fase{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;
+  padding:.12rem .35rem;border-radius:2px;border:1px solid var(--linea);color:var(--tinta-2);margin-right:.2rem}
+.fase.d{border-color:var(--acero);color:var(--acero)}
+.fase.c{border-color:var(--obra);color:var(--obra)}
+tfoot td{padding:.65rem .8rem;font-family:var(--display);font-size:.72rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--acero);
+  background:var(--banda);border-top:2px solid var(--acero)}
+tfoot td.mo,tfoot td.dl{font-family:var(--mono);font-size:.86rem;letter-spacing:0;text-transform:none}
+.nota{font-size:.78rem;color:var(--tinta-3);margin-top:.8rem;font-family:var(--mono);line-height:1.6}
+
+/* ---------- dimensiones BIM ---------- */
+.dims{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea)}
+.dim{background:var(--sup);padding:1rem 1.05rem}
+.dim b{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--obra);letter-spacing:-.03em;display:block;line-height:1}
+.dim h4{font-family:var(--display);font-size:.86rem;font-weight:600;color:var(--acero);margin:.4rem 0 .35rem}
+.dim p{font-size:.82rem;color:var(--tinta-2);line-height:1.5}
+
+/* ---------- productos ---------- */
+.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.2rem}
+.prod{border:1px solid var(--linea);background:var(--sup);padding:1.3rem;display:flex;flex-direction:column;gap:.7rem}
+.prod-cab{display:flex;align-items:center;gap:.6rem}
+.prod h3{font-family:var(--display);font-size:1.2rem;font-weight:700;color:var(--acero);letter-spacing:-.02em}
+.estado{font-family:var(--mono);font-size:.61rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.18rem .45rem;margin-left:auto;border-radius:2px}
+.estado.vivo{background:var(--obra);color:#fff}
+.estado.curso{background:var(--banda);color:var(--tinta-2);border:1px solid var(--linea)}
+.prod>p{font-size:.92rem;color:var(--tinta-2)}
+.prod ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.prod li{position:relative;padding-left:1.05rem;font-size:.87rem;color:var(--tinta-2)}
+.prod li::before{content:"";position:absolute;left:0;top:.62em;width:.38rem;height:1px;background:var(--obra-s)}
+.prod li b{color:var(--tinta);font-weight:600}
+.abrir{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--obra);text-decoration:none;
+  border:1px solid var(--obra);padding:.4rem .75rem;border-radius:2px;
+  transition:background .15s,color .15s;align-self:flex-start}
+.abrir:hover{background:var(--obra);color:#fff}
+
+/* ---------- formación y competencias ---------- */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.6rem 3rem}
+.subhead{font-family:var(--display);font-size:.7rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--tinta-3);margin:0 0 .8rem}
+.estudio{display:flex;gap:.9rem;align-items:baseline;margin-bottom:.85rem}
+.estudio .yr{font-family:var(--mono);font-size:.71rem;font-weight:600;color:var(--obra);flex:0 0 4.4rem}
+.estudio .txt b{font-family:var(--display);font-weight:600;font-size:.87rem;color:var(--acero);display:block;line-height:1.3}
+.estudio .txt em{font-style:normal;color:var(--tinta-2);font-size:.82rem}
+.estudio .txt .premio{color:var(--obra);font-weight:600;font-family:var(--mono);font-size:.71rem;display:block;margin-top:.1rem}
+.comp{margin-bottom:.85rem;font-size:.92rem;max-width:46rem}
+.comp b{font-family:var(--display);font-weight:600;font-size:.82rem;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--acero);display:block;margin-bottom:.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips span{font-family:var(--mono);font-size:.71rem;padding:.3rem .6rem;
+  border:1px solid var(--linea);background:var(--sup);color:var(--tinta-2)}
+
+footer{border-top:2px solid var(--acero);margin-top:3rem;padding-top:1.2rem;
+  display:flex;gap:1.5rem;flex-wrap:wrap;align-items:baseline}
+footer .id{font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--acero)}
+footer .meta{font-family:var(--mono);font-size:.73rem;color:var(--tinta-3);margin-left:auto}
+
+a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (max-width:760px){
+  .hoja{padding:1.8rem 1.15rem 3rem}
   .barra-in{padding:.55rem 1.15rem;gap:.6rem}
   .barra-nav{display:none}
   .barra-app{margin-left:auto}
+  .masthead{grid-template-columns:1fr;gap:1rem}
+  .retrato{width:6.5rem;height:6.5rem}
+  .puesto{grid-template-columns:1fr;gap:.9rem}
+  .ledger{flex-direction:row;flex-wrap:wrap;gap:.3rem 1.3rem}
 }
-@media print{.barra{display:none}}
+@media print{
+  body{background:#fff}
+  .hoja{max-width:none;padding:0}
+  .barra,.abrir,.filtros{display:none}
+  .puesto,section,.gantt,.prod,.logro{break-inside:avoid}
+  .gbarra,.ghoy,.escala>div,.tag,.estado,thead th,.logro{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  [hidden]{display:table-row!important}
+}
 </style>
 
 <nav class="barra">
@@ -255,8 +271,8 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     <div class="barra-nav">
       <a href="#trayectoria">Trayectoria</a>
       <a href="#experiencia">Experiencia</a>
-      <a href="#obras">Obras</a>
-      <a href="#proyectos">Proyectos</a>
+      <a href="#cartera">Cartera</a>
+      <a href="#proyectos">Productos</a>
     </div>
     <a class="barra-app" href="https://workcontrol-aavo.vercel.app" target="_blank" rel="noopener">Entrar a Valhalla &#8599;</a>
   </div>
@@ -265,87 +281,129 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 <div class="hoja">
 
 <header class="masthead">
-  <p class="diana">Gerente BIM / VDC &middot; Infraestructura hospitalaria fast-track &middot; Contratos NEC</p>
-  <h1 class="nombre">Alex Andree Velásquez Ortiz</h1>
-  <p class="rol">Ingeniero Civil &middot; CIP 248987 &middot; VDC© Stanford University &middot; MBA(c)</p>
-  <p class="subrol">Gerencia BIM/VDC, Lean Construction y control 4D/5D en proyectos bajo NEC3 / NEC4</p>
-  <p class="contacto">
-    <span>Perú</span>
-    <a href="https://www.linkedin.com/in/andreevelasquez/" target="_blank" rel="noopener">linkedin.com/in/andreevelasquez</a>
-    <a href="mailto:alex.andree.velasquez.ortiz@gmail.com">alex.andree.velasquez.ortiz@gmail.com</a>
-  </p>
+  <img class="retrato" src="foto.jpg" alt="Alex Andree Velásquez Ortiz" width="136" height="136">
+  <div>
+    <p class="diana">Gerente BIM / VDC &middot; Fast-track &middot; Contratos NEC</p>
+    <h1 class="nombre">Alex Andree Velásquez Ortiz</h1>
+    <p class="rol">Ingeniero Civil colegiado &middot; CIP 248987 &middot; Certificado VDC© por Stanford University</p>
+    <p class="subrol">Especialidad BIM Manager (PUCP) &middot; Facility Management (UPC) &middot; MBA en curso</p>
+    <p class="contacto">
+      <span>Cajamarca, Perú</span>
+      <a href="https://www.linkedin.com/in/andreevelasquez/" target="_blank" rel="noopener">linkedin.com/in/andreevelasquez</a>
+      <a href="mailto:andree.velasquez@outlook.es">andree.velasquez@outlook.es</a>
+    </p>
+  </div>
 </header>
 
 <div class="perfil">
   <p>
-    Ingeniero Civil con <b>nueve años</b> dirigiendo la información de proyectos de infraestructura
-    en Perú y México, del modelo a la obra. Actualmente <b>Gerente BIM/VDC del Hospital III-1</b>
-    para China Road and Bridge Corporation, un fast-track bajo <b>NEC4 Opción C</b> de
-    <b>S/ 3.400 millones</b>.
+    Ingeniero Civil titulado y colegiado con <b>más de diez años de ejercicio</b>, ocho de ellos
+    dirigiendo la información de proyectos con BIM. Actualmente <b>Gerente BIM/VDC del
+    Hospital III-1</b> para China Road and Bridge Corporation, un fast-track bajo
+    <b>NEC4 Opción C</b> de <b>S/ 3.400 millones</b>, donde llevo diseño y construcción a la vez.
   </p>
   <p>
-    Cinco años continuos en establecimientos de salud ejecutados bajo contratos colaborativos NEC,
-    incluido el <b>Paquete 7 de la ARCC</b> en modalidad Gobierno a Gobierno con Reino Unido, donde
-    coordiné el diseño de tres establecimientos y dirigí la gestión BIM en construcción. Cartera
-    acumulada superior a <b>S/ 4.890 millones</b> (≈ US$ 1.270 millones).
+    <b>Seis proyectos fast-track</b> de gran envergadura gestionados con BIM &mdash;cinco en Perú y
+    uno en México&mdash;, con una cartera documentada de <b>S/ 4.896 millones</b>
+    (≈ US$ 1.274 millones). Cinco años continuos bajo contratos colaborativos NEC, incluido el
+    <b>Paquete 7 de la ARCC</b> en modalidad Gobierno a Gobierno con Reino Unido.
   </p>
   <p>
-    Trabajo donde el diseño todavía se está decidiendo mientras la obra ya avanza: coordinación
+    Trabajo donde el diseño todavía se decide mientras la obra ya avanza: coordinación
     multidisciplinar sobre modelo federado, sesiones ICE, sectorización con trenes de trabajo y
-    Last Planner, y seguimiento 4D enlazado a cronograma. Desarrollo además herramienta propia de
-    control de producción, <b>Valhalla</b>, hoy en uso.
+    Last Planner, y seguimiento 4D enlazado a cronograma. Instructor y mentor en <b>AECODE</b>,
+    y desarrollador de mis propias herramientas de control de producción.
   </p>
 </div>
 
 <div class="escala">
-  <div><span class="n">S/ 4.890<small> MM</small></span><span class="k">Cartera acumulada</span></div>
-  <div><span class="n">9<small> años</small></span><span class="k">Ejercicio profesional</span></div>
+  <div><span class="n">S/ 4.896<small> MM</small></span><span class="k">Cartera documentada</span></div>
+  <div><span class="n">10<small>+ años</small></span><span class="k">Ejercicio · 8 con BIM</span></div>
+  <div><span class="n">6</span><span class="k">Fast-track gestionados</span></div>
   <div><span class="n">5</span><span class="k">Establecimientos de salud</span></div>
-  <div><span class="n">NEC3<small> / NEC4</small></span><span class="k">Opción C y Opción F</span></div>
   <div><span class="n">3D<small>—8D</small></span><span class="k">Dimensiones aplicadas</span></div>
 </div>
 
+<section id="logros">
+  <h2>Logros medidos <em>Lo que la implantación de VDC devolvió</em></h2>
+  <div class="logros">
+    <div class="logro">
+      <span class="cifra">S/ 110.000<small> / mes</small></span>
+      <p>Optimización sostenida en un proceso integral de proyecto tras implantar VDC.</p>
+    </div>
+    <div class="logro">
+      <span class="cifra">S/ 100.000<small>+</small></span>
+      <p>Ahorro en un cambio puntual de tecnología constructiva, decidido sobre el modelo.</p>
+    </div>
+    <div class="logro">
+      <span class="cifra">19.000<small> flujos</small></span>
+      <p>Gestionados en el entorno común de datos del proyecto de Ica, con sus RFI asociados.</p>
+    </div>
+    <div class="logro">
+      <span class="cifra">1<small>er lugar</small></span>
+      <p>2da Especialidad en Gestión BIM en Edificaciones &mdash; SENCICO, nota 18,38.</p>
+    </div>
+  </div>
+</section>
+
 <section id="trayectoria">
-  <h2>Trayectoria <em>2017 — 2026 · a escala</em></h2>
+  <h2>Trayectoria <em>2014 — 2026 · a escala</em></h2>
   <div class="gantt">
     <div class="gantt-in">
       <div class="gcab"><span>Organización</span><div class="ganios">
-        <span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span>
-        <span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+        <span>2014</span><span>2015</span><span>2016</span><span>2017</span><span>2018</span>
+        <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span>
+        <span>2024</span><span>2025</span><span>2026</span>
       </div></div>
+
+      <div class="ghitos">
+        <span>Hitos</span>
+        <div class="ghitos-pista">
+          <div class="ghito" style="left:20.2%"></div><b style="left:20.2%">Título · UPN</b>
+          <div class="ghito" style="left:82.4%"></div><b style="left:82.4%">VDC Stanford</b>
+        </div>
+      </div>
 
       <div class="gfila">
         <div class="gnom"><b>China Road &amp; Bridge</b><span>Gerente BIM/VDC</span></div>
-        <div class="gpista"><div class="gbarra act" style="left:94.6%;right:0"><span>III-1</span></div>
+        <div class="gpista"><div class="gbarra act" style="left:96.7%;right:0"><span>III-1</span></div>
           <div class="ghoy" style="right:0"></div></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Consorcio S&amp;F</b><span>Gestor BIM/VDC · Ica</span></div>
-        <div class="gpista"><div class="gbarra" style="left:80.7%;width:13.8%"><span>S/ 800 MM</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:86.3%;width:9.8%"><span>S/ 800 MM</span></div></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Consorcio Suyay II</b><span>Coordinador → BIM Manager</span></div>
-        <div class="gpista"><div class="gbarra" style="left:44.1%;width:35.8%"><span>Paquete 7 · ARCC</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:60.2%;width:25.5%"><span>Paquete 7 · ARCC</span></div></div>
       </div>
       <div class="gfila">
-        <div class="gnom"><b>AddBIM</b><span>Coordinador BIM · México</span></div>
-        <div class="gpista"><div class="gbarra" style="left:36.7%;width:7.4%"><span>LOD 400</span></div></div>
+        <div class="gnom"><b>AddBIM · México</b><span>Coordinador BIM</span></div>
+        <div class="gpista"><div class="gbarra" style="left:54.9%;width:5.3%"><span>General Motors</span></div></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Osiris Building Group</b><span>Junior → Coordinador</span></div>
-        <div class="gpista"><div class="gbarra" style="left:20.2%;width:21.1%"><span>Proyectos BIM</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:43.1%;width:11.2%"><span>Edificación</span></div></div>
       </div>
       <div class="gfila">
-        <div class="gnom"><b>SACYR</b><span>Cadista · Cajamarca</span></div>
-        <div class="gpista"><div class="gbarra" style="left:12.8%;width:6.5%"></div></div>
+        <div class="gnom"><b>Consorcio SAHER</b><span>Sacyr–Herdoiza · Cadista</span></div>
+        <div class="gpista"><div class="gbarra" style="left:37.9%;width:3.9%"></div></div>
       </div>
       <div class="gfila">
-        <div class="gnom"><b>Civest · G. Bracking</b><span>Oficina técnica</span></div>
-        <div class="gpista"><div class="gbarra" style="left:3.6%;width:7.4%"></div></div>
+        <div class="gnom"><b>Civest · G. Bracing</b><span>Oficina técnica</span></div>
+        <div class="gpista"><div class="gbarra" style="left:31.4%;width:5.2%"></div></div>
       </div>
       <div class="gfila">
-        <div class="gnom"><b>Consorcio NN</b><span>Productividad de obra</span></div>
-        <div class="gpista"><div class="gbarra" style="left:0;width:3.6%"></div></div>
+        <div class="gnom"><b>Consorcio Ninabamba</b><span>Productividad de obra</span></div>
+        <div class="gpista"><div class="gbarra" style="left:28.1%;width:2.6%"></div></div>
+      </div>
+      <div class="gfila">
+        <div class="gnom"><b>Constructora E&amp;A</b><span>Asistente de obra</span></div>
+        <div class="gpista"><div class="gbarra" style="left:20.2%;width:2.7%"></div></div>
+      </div>
+      <div class="gfila">
+        <div class="gnom"><b>Asistencia de proyectos</b><span>Topografía y planos</span></div>
+        <div class="gpista"><div class="gbarra suave" style="left:0;width:15.1%"><span>Cadista</span></div></div>
       </div>
     </div>
   </div>
@@ -358,8 +416,9 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     <div class="ledger">
       <span class="periodo">May 2026 — actualidad</span>
       <div><dt>Modalidad</dt><dd>NEC4 Opción C · fast-track</dd></div>
+      <div><dt>Fase</dt><dd>Diseño y construcción</dd></div>
       <div><dt>Tipología</dt><dd>Hospital III-1</dd></div>
-      <div><dt>Presupuesto proyectado</dt><dd class="monto">S/ 3,400 MM</dd><dd>≈ US$ 890 MM</dd></div>
+      <div><dt>Presupuesto proyectado</dt><dd class="monto">S/ 3.400 MM</dd><dd>≈ US$ 890 MM</dd></div>
     </div>
     <div>
       <h3>Gerente BIM/VDC<span class="tag viva">Actual</span></h3>
@@ -367,7 +426,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
       <p class="proy">Hospital III-1 — el proyecto de mayor envergadura de la trayectoria</p>
       <ul>
         <li>Dirijo la estrategia BIM/VDC del proyecto: estándares de modelado, matriz de responsabilidades y control del modelo federado.</li>
-        <li>Coordino las especialidades en un fast-track, donde la construcción avanza mientras el diseño sigue cerrándose y las interferencias están en el camino crítico.</li>
+        <li>Llevo <b>diseño y construcción a la vez</b>, que es lo que define un fast-track: la obra avanza mientras el diseño sigue cerrándose, y las interferencias están en el camino crítico.</li>
         <li>Conduzco las sesiones ICE con proyectistas, subcontratistas y equipo de construcción para cerrar decisiones sobre el modelo.</li>
         <li>Enlazo el modelo al cronograma para el seguimiento 4D de avance y la sectorización del trabajo.</li>
       </ul>
@@ -378,17 +437,18 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     <div class="ledger">
       <span class="periodo">Ene 2025 — Abr 2026</span>
       <div><dt>Modalidad</dt><dd>NEC3 Opción F · fast-track</dd></div>
-      <div><dt>Ubicación</dt><dd>Ica, Perú</dd></div>
-      <div><dt>Presupuesto de proyecto</dt><dd class="monto">S/ 800 MM</dd><dd>≈ US$ 200 MM</dd></div>
+      <div><dt>Fase</dt><dd>Construcción</dd></div>
+      <div><dt>Tipología</dt><dd>Infraestructura · soluciones integrales</dd></div>
+      <div><dt>Presupuesto</dt><dd class="monto">S/ 800 MM</dd><dd>≈ US$ 200 MM</dd></div>
     </div>
     <div>
       <h3>Gestor BIM/VDC</h3>
-      <p class="emp">Consorcio S&amp;F</p>
-      <p class="proy">Proyecto de infraestructura bajo contrato colaborativo</p>
+      <p class="emp">Consorcio S&amp;F &middot; Ica, Perú</p>
+      <p class="proy">Proyecto de soluciones integrales, coordinado íntegramente en BIM</p>
       <ul>
-        <li>Gestioné el modelo como fuente única para cuantificación, coordinación y seguimiento de avance.</li>
-        <li>Implanté la estrategia de cuantificación BIM frente a la tradicional, y el control 5D contra presupuesto.</li>
-        <li>Sostuve la coordinación entre especialidades a través del ciclo completo de detección y liberación de interferencias.</li>
+        <li>Integré <b>BIM con GIS</b> para la toma de decisiones, conectando el modelo con las distintas áreas del proyecto.</li>
+        <li>Hice del entorno común de datos la pieza central: más de <b>19.000 flujos gestionados</b> en la plataforma, junto con los RFI.</li>
+        <li>Implanté la estrategia de cuantificación BIM frente a la tradicional y el control 5D contra presupuesto.</li>
       </ul>
     </div>
   </article>
@@ -396,9 +456,9 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   <article class="puesto nec">
     <div class="ledger">
       <span class="periodo">Sep 2021 — Dic 2024</span>
-      <div><dt>Modalidad</dt><dd>NEC3 Opción F híbrido</dd></div>
+      <div><dt>Modalidad</dt><dd>NEC3 · IPD · fast-track</dd></div>
+      <div><dt>Fase</dt><dd>Diseño y construcción</dd></div>
       <div><dt>Cliente</dt><dd>ARCC — G2G Perú–Reino Unido</dd></div>
-      <div><dt>Paquete</dt><dd>Paquete 7 Salud</dd></div>
       <div><dt>Presupuestos</dt>
         <dd class="monto">S/ 350 MM</dd><dd>Recuay</dd>
         <dd class="monto">S/ 300 MM</dd><dd>Casma</dd>
@@ -407,15 +467,15 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     </div>
     <div>
       <h3>Coordinador BIM → Especialista VDC → BIM Manager</h3>
-      <p class="emp">Consorcio Suyay II &middot; Áncash, Perú</p>
+      <p class="emp">Consorcio Suyay II (IBT + Rubika) &middot; Áncash, Perú</p>
       <p class="proy">Paquete 7 de la Autoridad para la Reconstrucción con Cambios — diseño y ejecución</p>
       <ul>
-        <li>Coordiné el diseño BIM de tres establecimientos de salud y asumí después la dirección BIM en construcción.</li>
-        <li>Implanté el seguimiento de obra con modelos 4D enlazados a cronograma 5D, y la sectorización con trenes de trabajo bajo Last Planner.</li>
-        <li>Conduje la coordinación colaborativa en sesiones ICE con diseñadores, subcontratistas y equipo de construcción, incluida la decisión de ubicación de la torre grúa.</li>
-        <li>Dirigí la gestión del movimiento de tierras en topografía accidentada e irregular, en modificación constante por tratarse de un fast-track.</li>
-        <li>Apliqué sostenibilidad BIM 6D, Facility Management 7D con COBie y seguridad BIM 8D.</li>
-        <li>Piloté el dron para el seguimiento de obra de Recuay y Yungar, con nube de puntos y fotogrametría como insumo de decisión.</li>
+        <li>Coordiné el <b>diseño</b> BIM de los tres establecimientos y asumí después la dirección BIM en <b>construcción</b> del Hospital de Recuay.</li>
+        <li>Enlacé el modelo con los costes mediante <b>Set Based Design</b>, para comparar alternativas antes de comprometerlas.</li>
+        <li>Implanté el seguimiento de obra con modelos <b>4D enlazados a cronograma 5D</b>, y la sectorización con trenes de trabajo bajo Last Planner.</li>
+        <li>Apliqué sostenibilidad 6D, Facility Management 7D con COBie y seguridad 8D.</li>
+        <li>Dirigí la gestión del movimiento de tierras en topografía accidentada, en modificación constante por tratarse de un fast-track.</li>
+        <li>Piloté el dron para el seguimiento de Recuay y Yungar &mdash;nube de puntos y fotogrametría&mdash;, con cámaras 360 integradas a todas las áreas.</li>
       </ul>
     </div>
   </article>
@@ -423,81 +483,128 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   <article class="puesto">
     <div class="ledger">
       <span class="periodo">Ene 2021 — Ago 2021</span>
-      <div><dt>Sector</dt><dd>Industrial · automotriz</dd></div>
-      <div><dt>Ubicación</dt><dd>Saltillo, México</dd></div>
-      <div><dt>Nivel de detalle</dt><dd class="monto">LOD 400</dd></div>
+      <div><dt>Modalidad</dt><dd>Fast-track</dd></div>
+      <div><dt>Fase</dt><dd>Construcción</dd></div>
+      <div><dt>Cliente</dt><dd>General Motors</dd></div>
+      <div><dt>Superficie</dt><dd class="monto">7.500 m²</dd><dd>LOD 400</dd></div>
     </div>
     <div>
       <h3>Coordinador BIM</h3>
-      <p class="emp">AddBIM</p>
-      <p class="proy">Fábrica de automóviles en construcción, modalidad fast-track</p>
+      <p class="emp">AddBIM &middot; Saltillo, México</p>
+      <p class="proy">Fábrica de automóviles de General Motors, en construcción</p>
       <ul>
-        <li>Modelé y coordiné la especialidad de instalaciones: aire comprimido, agua helada, agua fría doméstica, residuos industriales, gas natural, sanitaria y ventilación.</li>
+        <li>Modelé y coordiné la especialidad de instalaciones: aire comprimido, agua helada, agua fría doméstica, residuos industriales, gas natural, sanitaria, ventilación y bombeo.</li>
         <li>Resolví soportería y liberación de interferencias contra HVAC, estructuras y demás especialidades.</li>
-        <li>Propuse mejoras iteradas en sesiones ICE con criterio técnico, orientadas a reducir retrabajos e incompatibilidades.</li>
+        <li>Iteré propuestas de mejora en sesiones ICE para reducir retrabajos e incompatibilidades.</li>
       </ul>
     </div>
   </article>
 
   <article class="puesto">
     <div class="ledger">
-      <span class="periodo">Jul 2019 — May 2021</span>
+      <span class="periodo">Jul 2019 — Dic 2020</span>
       <div><dt>Progresión</dt><dd>Junior → Ing. BIM → Coordinador</dd></div>
-      <div><dt>Ubicación</dt><dd>Perú</dd></div>
+      <div><dt>Fase</dt><dd>Diseño</dd></div>
+      <div><dt>Sector</dt><dd>Edificación uni y multifamiliar</dd></div>
     </div>
     <div>
-      <h3>Coordinador de Proyectos BIM</h3>
-      <p class="emp">Osiris Building Group</p>
-      <p class="proy">Progresión completa dentro del área BIM, de soporte y modelado a coordinación</p>
+      <h3>Coordinador BIM de Proyectos</h3>
+      <p class="emp">Osiris Building Group &middot; Perú</p>
+      <p class="proy">Progresión completa dentro del área BIM en menos de dos años</p>
       <ul>
-        <li>Asumí la coordinación de proyectos BIM tras dos ascensos internos en menos de dos años.</li>
+        <li>Dirigí y proyecté edificaciones unifamiliares y multifamiliares, coordinando todas las especialidades.</li>
+        <li>Ejecuté las detecciones de interferencias y los entregables finales al cliente, incluidos los trámites de licencias.</li>
       </ul>
     </div>
   </article>
 
   <article class="puesto">
     <div class="ledger">
-      <span class="periodo">Sep 2017 — May 2019</span>
-      <div><dt>Sector</dt><dd>Vial · oficina técnica</dd></div>
-      <div><dt>Ubicación</dt><dd>Cajamarca, Perú</dd></div>
+      <span class="periodo">2014 — May 2019</span>
+      <div><dt>Fase</dt><dd>Construcción y oficina técnica</dd></div>
+      <div><dt>Sector</dt><dd>Vial, salud y edificación</dd></div>
+      <div><dt>Obras</dt>
+        <dd class="monto">S/ 4,3 MM</dd><dd>C.S. Ninabamba</dd>
+        <dd class="monto">S/ 2,1 MM</dd><dd>Jr. Chanchamayo</dd>
+      </div>
     </div>
     <div>
       <h3>Oficina técnica, productividad y topografía</h3>
-      <p class="emp">SACYR &middot; Civest &middot; G. Bracking &middot; Consorcio NN</p>
+      <p class="emp">Consorcio SAHER (Sacyr–Herdoiza) &middot; Civest &middot; G. Bracing &middot; Consorcio Ninabamba &middot; Constructora E&amp;A</p>
       <p class="proy">Los cimientos: la obra antes del modelo</p>
       <ul>
-        <li>Inspeccioné y evalué obras de arte y drenaje en los tramos ST04 y ST05, con obtención de datos de campo y metrados.</li>
-        <li>Procesé datos con ortofotos en Civil 3D y elaboré planos as-built y evaluación expost.</li>
-        <li>Asistí a la gerencia de oficina técnica y de proyectos, y al control de productividad de obra.</li>
+        <li>Modelé en BIM todas las especialidades del Centro de Salud Ninabamba para el control de obra, aplicando ya herramientas Lean.</li>
+        <li>Levanté información de campo, obras de arte y drenaje en carreteras &mdash;niveles de servicio ST06 a ST16&mdash; con Civil 3D, y elaboré planos as-built y evaluación expost.</li>
+        <li>Controlé la calidad del vaciado de concreto premezclado con pruebas in situ, y los metrados de geomalla, geotextil y materiales.</li>
+        <li>Asistí a la gerencia de oficina técnica: propuestas técnicas, costos unitarios y organización de la productividad.</li>
       </ul>
     </div>
   </article>
 </section>
 
-<section id="obras">
-  <h2>Establecimientos de salud <em>Proyectos en los que ha ejercido la gestión BIM/VDC</em></h2>
-  <div class="fichas">
-    <div class="ficha">
-      <b>Hospital III-1</b><span class="lugar">China Road &amp; Bridge · Perú</span>
-      <span class="lvl">S/ 3,400 MM</span><em>NEC4 Opción C · fast-track</em>
-    </div>
-    <div class="ficha">
-      <b>Proyecto Ica</b><span class="lugar">Consorcio S&amp;F · Ica</span>
-      <span class="lvl">S/ 800 MM</span><em>NEC3 Opción F · fast-track</em>
-    </div>
-    <div class="ficha">
-      <b>Hospital de Recuay</b><span class="lugar">Recuay, Áncash</span>
-      <span class="lvl">S/ 350 MM</span><em>Diseño y construcción · ARCC</em>
-    </div>
-    <div class="ficha">
-      <b>Hospital de Casma</b><span class="lugar">Casma, Áncash</span>
-      <span class="lvl">S/ 300 MM</span><em>Coordinación de diseño · ARCC</em>
-    </div>
-    <div class="ficha">
-      <b>Centro de Salud Yungar</b><span class="lugar">Yungar, Áncash</span>
-      <span class="lvl">S/ 40 MM</span><em>Diseño y etapa inicial · ARCC</em>
-    </div>
+<section id="cartera">
+  <h2>Cartera de proyectos <em>Filtra por marco contractual o por fase</em></h2>
+
+  <div class="filtros" role="group" aria-label="Filtrar la cartera">
+    <button class="filtro" type="button" data-f="todos" aria-pressed="true">Todos <span class="cuenta">8</span></button>
+    <button class="filtro" type="button" data-f="nec4" aria-pressed="false">NEC4 <span class="cuenta">1</span></button>
+    <button class="filtro" type="button" data-f="nec3" aria-pressed="false">NEC3 <span class="cuenta">4</span></button>
+    <button class="filtro" type="button" data-f="fast" aria-pressed="false">Fast-track <span class="cuenta">6</span></button>
+    <button class="filtro" type="button" data-f="diseno" aria-pressed="false">Diseño <span class="cuenta">4</span></button>
+    <button class="filtro" type="button" data-f="construccion" aria-pressed="false">Construcción <span class="cuenta">7</span></button>
+    <button class="filtro" type="button" data-f="salud" aria-pressed="false">Salud <span class="cuenta">5</span></button>
   </div>
+
+  <div class="tablawrap">
+    <table id="tabla-cartera">
+      <thead>
+        <tr><th>Proyecto</th><th>Rol</th><th>Marco</th><th>Fase</th><th style="text-align:right">S/ MM</th><th style="text-align:right">US$ MM</th></tr>
+      </thead>
+      <tbody>
+        <tr data-t="nec4 fast diseno construccion salud" data-mm="3400" data-us="890">
+          <td class="pr">Hospital III-1</td><td class="mk">Gerente BIM/VDC</td><td class="mk">NEC4 Opción C</td>
+          <td><span class="fase d">Diseño</span><span class="fase c">Construcción</span></td>
+          <td class="mo">3.400</td><td class="dl">890</td></tr>
+        <tr data-t="nec3 fast construccion" data-mm="800" data-us="200">
+          <td class="pr">Ica · Soluciones integrales</td><td class="mk">Gestor BIM/VDC</td><td class="mk">NEC3 Opción F</td>
+          <td><span class="fase c">Construcción</span></td>
+          <td class="mo">800</td><td class="dl">200</td></tr>
+        <tr data-t="nec3 fast diseno construccion salud" data-mm="350" data-us="92">
+          <td class="pr">Hospital de Recuay</td><td class="mk">Coordinador → BIM Manager</td><td class="mk">NEC3 · ARCC</td>
+          <td><span class="fase d">Diseño</span><span class="fase c">Construcción</span></td>
+          <td class="mo">350</td><td class="dl">92</td></tr>
+        <tr data-t="nec3 fast diseno salud" data-mm="300" data-us="79">
+          <td class="pr">Hospital de Casma</td><td class="mk">Coordinador BIM de diseño</td><td class="mk">NEC3 · ARCC</td>
+          <td><span class="fase d">Diseño</span></td>
+          <td class="mo">300</td><td class="dl">79</td></tr>
+        <tr data-t="nec3 fast diseno construccion salud" data-mm="40" data-us="11">
+          <td class="pr">Centro de Salud Yungar</td><td class="mk">Diseño y etapa inicial</td><td class="mk">NEC3 · ARCC</td>
+          <td><span class="fase d">Diseño</span><span class="fase c">Construcción</span></td>
+          <td class="mo">40</td><td class="dl">11</td></tr>
+        <tr data-t="fast construccion" data-mm="0" data-us="0">
+          <td class="pr">Planta General Motors</td><td class="mk">Coordinación BIM · 7.500 m²</td><td class="mk">Fast-track · México</td>
+          <td><span class="fase c">Construcción</span></td>
+          <td class="mo">—</td><td class="dl">—</td></tr>
+        <tr data-t="construccion salud" data-mm="4.3" data-us="1.1">
+          <td class="pr">C.S. Ninabamba</td><td class="mk">Productividad de obra</td><td class="mk">Ejecución</td>
+          <td><span class="fase c">Construcción</span></td>
+          <td class="mo">4,3</td><td class="dl">1,1</td></tr>
+        <tr data-t="construccion" data-mm="2.1" data-us="0.5">
+          <td class="pr">Jr. Chanchamayo</td><td class="mk">Asistente de obra</td><td class="mk">Pavimentación</td>
+          <td><span class="fase c">Construcción</span></td>
+          <td class="mo">2,1</td><td class="dl">0,5</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="4" id="pie-label">Total documentado</td>
+          <td class="mo" id="pie-mm">4.896</td><td class="dl" id="pie-us">1.274</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <p class="nota">
+    Suma de los presupuestos declarados en cada proyecto. La planta de General Motors no lleva
+    cifra porque no consta en la documentación: es el sexto fast-track, y se contabiliza por
+    superficie coordinada. El total se recalcula al filtrar.
+  </p>
 </section>
 
 <section>
@@ -505,7 +612,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   <div class="dims">
     <div class="dim"><b>3D</b><h4>Modelo federado</h4><p>Coordinación multidisciplinar, LOD 400 y liberación de interferencias entre especialidades.</p></div>
     <div class="dim"><b>4D</b><h4>Tiempo</h4><p>Modelo enlazado a cronograma para seguimiento de obra, sectorización y trenes de trabajo.</p></div>
-    <div class="dim"><b>5D</b><h4>Coste</h4><p>Estrategia de cuantificación BIM frente a la tradicional y control de avance contra presupuesto.</p></div>
+    <div class="dim"><b>5D</b><h4>Coste</h4><p>Cuantificación BIM frente a la tradicional y Set Based Design para comparar alternativas.</p></div>
     <div class="dim"><b>6D</b><h4>Sostenibilidad</h4><p>Criterios de sostenibilidad incorporados al modelo durante el diseño.</p></div>
     <div class="dim"><b>7D</b><h4>Operación · COBie</h4><p>Facility Management: la información que el establecimiento necesita el día que empieza a operar.</p></div>
     <div class="dim"><b>8D</b><h4>Seguridad</h4><p>Planificación de seguridad sobre el modelo, antes de que la cuadrilla pise el frente.</p></div>
@@ -518,7 +625,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     <article class="prod">
       <div class="prod-cab"><h3>Valhalla</h3><span class="estado vivo">En producción</span></div>
       <p>Control de producción bajo Last Planner System. Nació de una carencia concreta: medir el PPC de verdad, día a día, en lugar de reconstruirlo a fin de mes cuando ya no sirve para decidir nada.</p>
-      <p><a class="abrir" href="https://workcontrol-aavo.vercel.app" target="_blank" rel="noopener">Abrir Valhalla &rarr;</a></p>
+      <a class="abrir" href="https://workcontrol-aavo.vercel.app" target="_blank" rel="noopener">Abrir Valhalla &rarr;</a>
       <ul>
         <li><b>PPC diario</b> por tarea y por rutina, con histórico y auditoría del indicador.</li>
         <li><b>Cronograma con planificación directa</b>: se arrastran las barras y las fechas se mueven.</li>
@@ -540,19 +647,25 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 </section>
 
 <section>
-  <h2>Formación y certificación</h2>
+  <h2>Formación</h2>
   <div class="cols">
     <div>
-      <p class="subhead">Formación</p>
-      <div class="estudio"><span class="yr">MBA</span><span class="txt"><b>Máster en Administración de Empresas</b><em>En curso</em></span></div>
-      <div class="estudio"><span class="yr">VDC</span><span class="txt"><b>Virtual Design and Construction VDC©</b><em>Stanford University</em></span></div>
-      <div class="estudio"><span class="yr">CIP</span><span class="txt"><b>Ingeniero Civil colegiado</b><em>Colegio de Ingenieros del Perú · CIP 248987</em></span></div>
-      <div class="estudio"><span class="yr">SFC</span><span class="txt"><b>Scrum Foundation Certified™</b><em>Certificación en marcos ágiles</em></span></div>
+      <p class="subhead">Titulación y posgrado</p>
+      <div class="estudio"><span class="yr">2024</span><span class="txt"><b>Virtual Design and Construction VDC©</b><em>Stanford University · Construction Management</em></span></div>
+      <div class="estudio"><span class="yr">2022</span><span class="txt"><b>Especialidad: BIM Manager</b><em>Pontificia Universidad Católica del Perú</em></span></div>
+      <div class="estudio"><span class="yr">2022</span><span class="txt"><b>Facility Management</b><em>Universidad Peruana de Ciencias Aplicadas</em></span></div>
+      <div class="estudio"><span class="yr">2020–21</span><span class="txt"><b>2da Especialidad: Gestión BIM en Edificaciones</b><em>Ministerio de Vivienda y SENCICO</em><span class="premio">1er lugar · nota 18,38</span></span></div>
+      <div class="estudio"><span class="yr">En curso</span><span class="txt"><b>MBA — Master of Business Administration</b><em>Universidad Internacional de La Rioja, México</em></span></div>
+      <div class="estudio"><span class="yr">2016</span><span class="txt"><b>Ingeniero Civil</b><em>Universidad Privada del Norte</em><span class="premio">Mención honorífica 20 en la tesis</span></span></div>
     </div>
     <div>
-      <p class="subhead">Marcos de gestión</p>
-      <p class="comp"><b>Contractual</b>NEC3 y NEC4, Opción C y Opción F, incluida modalidad híbrida y Gobierno a Gobierno con Reino Unido. Contratos colaborativos IPD.</p>
-      <p class="comp"><b>Producción</b>Lean Construction, Last Planner System, trenes de trabajo, sectorización, sesiones ICE, Project &amp; Portfolio Management.</p>
+      <p class="subhead">Formación en curso</p>
+      <div class="estudio"><span class="yr">2025</span><span class="txt"><b>Inteligencia Artificial aplicada a la industria AEC</b><em>AECODE</em></span></div>
+      <div class="estudio"><span class="yr">2025</span><span class="txt"><b>Automatización con Revit API y C#</b><em>Lambda · y Dynamo + Python</em></span></div>
+      <div class="estudio"><span class="yr">2025</span><span class="txt"><b>Planning BIM 4D — Synchro Pro</b><em>Con Power BI y Revit</em></span></div>
+      <div class="estudio"><span class="yr">—</span><span class="txt"><b>PMP®</b><em>En preparación para la certificación</em></span></div>
+      <p class="subhead" style="margin-top:1.4rem">Comunidad</p>
+      <div class="estudio"><span class="yr">AECODE</span><span class="txt"><b>Colaborador oficial, instructor y mentor</b><em>BIM, Lean, VDC, innovación y transformación digital en la industria AEC</em></span></div>
     </div>
   </div>
 </section>
@@ -561,19 +674,65 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   <h2>Competencias técnicas</h2>
   <div class="cols">
     <div>
-      <p class="comp"><b>Modelado y coordinación</b>Revit · Navisworks · Revizto · Civil 3D · Dynamo · modelo federado · LOD 400 · liberación de interferencias · parámetros compartidos y estándares de modelado.</p>
-      <p class="comp"><b>Captura de realidad</b>Scan to BIM · LiDAR · nube de puntos · fotogrametría · piloto de dron para seguimiento de obra · GIS.</p>
+      <p class="comp"><b>Modelado y coordinación</b>Revit · Navisworks · Revizto · Civil 3D · modelo federado · LOD 400 · detección y liberación de interferencias · estándares y parámetros compartidos.</p>
+      <p class="comp"><b>Planificación y control</b>Synchro Pro · modelos 4D enlazados a cronograma · cuantificación y control 5D · Set Based Design · PPC y análisis de causas · MS Project · Power BI.</p>
     </div>
     <div>
-      <p class="comp"><b>Planificación y control</b>Modelos 4D enlazados a cronograma · cuantificación y control 5D · PPC y análisis de causas de no cumplimiento · Power BI.</p>
-      <p class="comp"><b>Visualización y automatización</b>Realidad Virtual, Aumentada y Mixta · Digital Twins · automatización de procesos y desarrollo de herramientas propias.</p>
+      <p class="comp"><b>Captura de realidad</b>Scan to BIM · LiDAR · nube de puntos · fotogrametría y pilotaje de dron · cámaras 360 · GIS.</p>
+      <p class="comp"><b>Automatización</b>Dynamo + Python · Revit API con C# · desarrollo de aplicaciones propias · Digital Twins · Realidad Virtual, Aumentada y Mixta.</p>
     </div>
+  </div>
+  <div class="chips" style="margin-top:.6rem">
+    <span>Lean Construction</span><span>Last Planner System</span><span>IPD</span><span>Target Value Design</span>
+    <span>Sesiones ICE</span><span>Scrum · SFC™</span><span>Design Thinking</span><span>PMI</span>
+    <span>NEC3 / NEC4</span><span>Entornos comunes de datos</span><span>Inglés</span>
   </div>
 </section>
 
 <footer>
   <span class="id">Alex Andree Velásquez Ortiz</span>
-  <span class="meta">Ingeniero Civil · CIP 248987 · Perú</span>
+  <span class="meta">Ingeniero Civil · CIP 248987 · Cajamarca, Perú</span>
 </footer>
 
 </div>
+
+<script>
+/* Filtrar la cartera. El total del pie se recalcula con lo que queda a la
+   vista: un filtro que deja el total de todo miente sobre lo que enseña. */
+(function () {
+  var tabla = document.getElementById('tabla-cartera');
+  if (!tabla) return;
+  var filas = Array.prototype.slice.call(tabla.tBodies[0].rows);
+  var botones = Array.prototype.slice.call(document.querySelectorAll('.filtro'));
+  var pieMM = document.getElementById('pie-mm');
+  var pieUS = document.getElementById('pie-us');
+  var pieLab = document.getElementById('pie-label');
+
+  function mil(n) {
+    // Miles con punto y decimal con coma, como el resto de la página.
+    var e = (Math.round(n * 10) / 10).toString().split('.');
+    return e[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (e[1] ? ',' + e[1] : '');
+  }
+
+  function aplicar(f) {
+    var mm = 0, us = 0, n = 0;
+    filas.forEach(function (fila) {
+      var ok = f === 'todos' || (' ' + fila.dataset.t + ' ').indexOf(' ' + f + ' ') > -1;
+      fila.hidden = !ok;
+      if (ok) { mm += parseFloat(fila.dataset.mm) || 0; us += parseFloat(fila.dataset.us) || 0; n++; }
+    });
+    pieMM.textContent = mil(mm);
+    pieUS.textContent = mil(us);
+    pieLab.textContent = f === 'todos'
+      ? 'Total documentado'
+      : n + (n === 1 ? ' proyecto' : ' proyectos') + ' · subtotal';
+    botones.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.f === f));
+    });
+  }
+
+  botones.forEach(function (b) {
+    b.addEventListener('click', function () { aplicar(b.dataset.f); });
+  });
+})();
+</script>
