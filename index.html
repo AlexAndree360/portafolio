@@ -6,27 +6,27 @@
 
 <style>
 :root{
-  --papel:#FAFAF7; --sup:#FFFFFF; --banda:#F1F3F1; --tinta:#14191C;
-  --acero:#1B3A4B; --tinta-2:#5C6A6E; --tinta-3:#7C888B;
-  --linea:#D9DEDB; --linea-s:#E7EAE7;
-  --obra:#C8500C; --obra-s:#E0824A; --obra-bg:#F8EAE0;
+  --papel:#F8F9F7; --sup:#FFFFFF; --banda:#EFF2F1; --tinta:#0F1417;
+  --acero:#0E3145; --tinta-2:#556268; --tinta-3:#7B878C;
+  --linea:#DBE0DF; --linea-s:#E9EDEC;
+  --obra:#D2540A; --obra-s:#E8823C; --obra-bg:#FBEADC;
   --display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --texto:"Source Serif 4",Georgia,"Times New Roman",serif;
   --mono:"IBM Plex Mono","SF Mono",Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --papel:#11161A; --sup:#171D22; --banda:#1C2329; --tinta:#E6EAE8;
-    --acero:#8FB8CE; --tinta-2:#98A5A8; --tinta-3:#7C888B;
-    --linea:#2B333A; --linea-s:#232A30;
-    --obra:#E8894C; --obra-s:#B87340; --obra-bg:#2B1B11;
+    --papel:#080C10; --sup:#111820; --banda:#19212A; --tinta:#EDF2F4;
+    --acero:#6FC0EC; --tinta-2:#9AA8B0; --tinta-3:#6E7C85;
+    --linea:#232D38; --linea-s:#1B242D;
+    --obra:#FF8A42; --obra-s:#C96A31; --obra-bg:#2A1710;
   }
 }
 :root[data-theme="dark"]{
-  --papel:#11161A; --sup:#171D22; --banda:#1C2329; --tinta:#E6EAE8;
-  --acero:#8FB8CE; --tinta-2:#98A5A8; --tinta-3:#7C888B;
-  --linea:#2B333A; --linea-s:#232A30;
-  --obra:#E8894C; --obra-s:#B87340; --obra-bg:#2B1B11;
+  --papel:#080C10; --sup:#111820; --banda:#19212A; --tinta:#EDF2F4;
+  --acero:#6FC0EC; --tinta-2:#9AA8B0; --tinta-3:#6E7C85;
+  --linea:#232D38; --linea-s:#1B242D;
+  --obra:#FF8A42; --obra-s:#C96A31; --obra-bg:#2A1710;
 }
 
 *{box-sizing:border-box}
@@ -57,13 +57,14 @@ h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
 /* ---------- encabezado ---------- */
 .masthead{border-bottom:2px solid var(--acero);padding-bottom:1.15rem;
   display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:start}
-.retrato{width:8.5rem;height:8.5rem;object-fit:cover;object-position:center top;
-  border:1px solid var(--linea);border-radius:2px;background:var(--banda)}
+.retrato{width:12.5rem;height:14rem;object-fit:cover;object-position:center 20%;
+  border:1px solid var(--linea);border-radius:3px;background:var(--banda);
+  box-shadow:0 2px 14px rgba(20,25,28,.12)}
 .diana{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;
   letter-spacing:.12em;color:var(--obra);margin:0 0 .75rem}
-.nombre{font-family:var(--display);font-weight:700;
-  font-size:clamp(2rem,5.4vw,3.1rem);line-height:1.02;letter-spacing:-.022em;
-  color:var(--acero);margin:0 0 .55rem}
+.nombre{font-family:var(--display);font-weight:800;
+  font-size:clamp(2.2rem,6vw,3.6rem);line-height:1;letter-spacing:-.028em;
+  color:var(--tinta);margin:0 0 .6rem}
 .rol{font-family:var(--display);font-weight:500;font-size:clamp(.96rem,2vw,1.12rem);margin:0 0 .3rem}
 .subrol{font-family:var(--display);font-size:.88rem;color:var(--tinta-2);margin:0}
 .contacto{font-family:var(--mono);font-size:.77rem;color:var(--tinta-2);
@@ -83,8 +84,9 @@ h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
 /* ---------- cifras ---------- */
 .escala{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));
   gap:1px;background:var(--linea);border:1px solid var(--linea);margin-top:2.2rem}
-.escala>div{background:var(--sup);padding:1.05rem 1.1rem}
-.escala .n{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,3.1vw,1.8rem);
+.escala>div{background:var(--sup);padding:1.25rem 1.15rem;transition:background .15s}
+.escala>div:hover{background:var(--banda)}
+.escala .n{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.6vw,2.15rem);
   letter-spacing:-.028em;color:var(--acero);font-variant-numeric:tabular-nums;display:block;line-height:1.1}
 .escala .n small{font-size:.52em;font-weight:600;color:var(--tinta-3);letter-spacing:0}
 .escala .k{font-family:var(--mono);font-size:.63rem;text-transform:uppercase;
@@ -92,50 +94,57 @@ h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
 
 /* ---------- secciones ---------- */
 section{margin-top:2.9rem}
-h2{font-family:var(--display);font-size:.78rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.16em;color:var(--acero);
-  margin:0 0 1.15rem;padding-bottom:.5rem;border-bottom:1px solid var(--linea);
+h2{font-family:var(--display);font-size:.78rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--obra);
+  margin:0 0 1.3rem;padding-bottom:.55rem;border-bottom:2px solid var(--linea);
   display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
 h2 em{font-style:normal;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;
   color:var(--tinta-3);text-transform:none;font-weight:400}
 
 /* ---------- logros ---------- */
 .logros{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
-.logro{border:1px solid var(--linea);border-left:3px solid var(--obra);background:var(--sup);padding:1.1rem 1.2rem}
-.logro .cifra{font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--obra);
+.logro{border:1px solid var(--linea);border-left:3px solid var(--obra);background:var(--sup);
+  padding:1.25rem 1.3rem;transition:border-color .15s,transform .15s}
+.logro:hover{border-color:var(--obra-s);transform:translateY(-2px)}
+.logro .cifra{font-family:var(--display);font-weight:800;font-size:1.7rem;color:var(--obra);
   letter-spacing:-.028em;font-variant-numeric:tabular-nums;display:block;line-height:1.1}
 .logro .cifra small{font-size:.55em;font-weight:600;color:var(--tinta-3)}
 .logro p{font-size:.86rem;color:var(--tinta-2);margin-top:.4rem;line-height:1.5}
 
 /* ---------- gantt ---------- */
 .gantt{border:1px solid var(--linea);background:var(--sup);overflow-x:auto}
-.gantt-in{min-width:48rem}
+.gantt-in{min-width:52rem}
 .ganios{display:grid;grid-template-columns:repeat(13,1fr);background:var(--banda);border-bottom:1px solid var(--linea)}
 .ganios span{font-family:var(--mono);font-size:.6rem;color:var(--tinta-3);
   padding:.42rem .3rem;border-left:1px solid var(--linea-s)}
 .ganios span:first-child{border-left:0}
-.gfila{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea-s);align-items:center}
+.gfila{display:grid;grid-template-columns:15.5rem 1fr;border-bottom:1px solid var(--linea-s);align-items:center}
 .gfila:last-child{border-bottom:0}
 .gfila:hover{background:var(--banda)}
-.gcab{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea)}
+.gcab{display:grid;grid-template-columns:15.5rem 1fr;border-bottom:1px solid var(--linea)}
 .gcab>span{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;
   color:var(--tinta-3);padding:.42rem .8rem;background:var(--banda)}
-.gnom{padding:.55rem .8rem;border-right:1px solid var(--linea-s)}
-.gnom b{font-family:var(--display);font-weight:600;font-size:.79rem;display:block;line-height:1.25}
-.gnom span{font-family:var(--mono);font-size:.63rem;color:var(--tinta-3)}
-.gpista{position:relative;height:2.4rem}
+.gnom{padding:.7rem .85rem;border-right:1px solid var(--linea-s)}
+.gnom b{font-family:var(--display);font-weight:700;font-size:.95rem;display:block;
+  line-height:1.25;color:var(--acero);letter-spacing:-.01em}
+.gnom span{font-family:var(--mono);font-size:.7rem;color:var(--tinta-2);display:block;margin-top:.1rem}
+.gpista{position:relative;height:3.3rem}
 .gpista::before{content:"";position:absolute;inset:0;
   background:repeating-linear-gradient(to right,var(--linea-s) 0 1px,transparent 1px 7.6923%)}
-.gbarra{position:absolute;top:50%;transform:translateY(-50%);height:.8rem;
-  background:var(--acero);display:flex;align-items:center;padding:0 .35rem;min-width:5px;border-radius:2px}
+.gbarra{position:absolute;top:.75rem;height:.85rem;background:var(--acero);
+  min-width:6px;border-radius:2px}
+.getiq{position:absolute;top:1.95rem;font-family:var(--mono);font-size:.68rem;
+  font-weight:500;color:var(--tinta-2);white-space:nowrap;letter-spacing:.01em}
+.getiq.fin{transform:translateX(-100%)}
+.gbar-act .getiq{color:var(--obra);font-weight:600}
 .gbarra.act{background:var(--obra)}
 .gbarra.suave{background:var(--tinta-3)}
-.gbarra span{font-family:var(--mono);font-size:.56rem;color:#fff;white-space:nowrap;letter-spacing:.02em}
+.gbarra.suave{background:var(--tinta-3)}
 .ghoy{position:absolute;top:0;bottom:0;width:2px;background:var(--obra)}
 /* Hitos verticales que cruzan todo el cuadro: el título y la colegiatura no
    son un puesto, son la fecha desde la que cuenta el ejercicio. */
 .ghito{position:absolute;top:0;bottom:0;width:0;border-left:1.5px dashed var(--acero);opacity:.65}
-.ghitos{display:grid;grid-template-columns:13rem 1fr;border-bottom:1px solid var(--linea);background:var(--banda)}
+.ghitos{display:grid;grid-template-columns:15.5rem 1fr;border-bottom:1px solid var(--linea);background:var(--banda)}
 .ghitos-pista{position:relative;height:1.5rem}
 .ghitos-pista b{position:absolute;transform:translateX(-50%);white-space:nowrap;
   font-family:var(--mono);font-size:.58rem;font-weight:500;color:var(--acero);top:.28rem}
@@ -211,6 +220,39 @@ tfoot td{padding:.65rem .8rem;font-family:var(--display);font-size:.72rem;font-w
 tfoot td.mo,tfoot td.dl{font-family:var(--mono);font-size:.86rem;letter-spacing:0;text-transform:none}
 .nota{font-size:.78rem;color:var(--tinta-3);margin-top:.8rem;font-family:var(--mono);line-height:1.6}
 
+/* Cuadro de mando de la cartera. Escala LINEAL a propósito: el Hospital
+   III-1 es cuatro veces el siguiente, y una logarítmica escondería justo
+   eso. Los proyectos pequeños llevan ancho mínimo para no desaparecer, y
+   la cifra va siempre escrita al lado. */
+.panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1px;
+  background:var(--linea);border:1px solid var(--linea);margin-bottom:1.1rem}
+.panel>div{background:var(--sup);padding:.9rem 1rem}
+.panel .pv{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--acero);
+  font-variant-numeric:tabular-nums;display:block;line-height:1.1;letter-spacing:-.022em}
+.panel .pv small{font-size:.52em;font-weight:600;color:var(--tinta-3)}
+.panel .pk{font-family:var(--mono);font-size:.61rem;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--tinta-3);display:block;margin-top:.3rem}
+
+.grafico{border:1px solid var(--linea);background:var(--sup);padding:1.15rem 1.25rem;margin-bottom:1.1rem}
+.gtit{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--tinta-3);margin-bottom:1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.gbar{display:grid;grid-template-columns:12.5rem 1fr 5.4rem;align-items:center;gap:.8rem;margin-bottom:.55rem}
+.gbar:last-child{margin-bottom:0}
+.gbl{font-family:var(--display);font-size:.82rem;font-weight:600;color:var(--acero);text-align:right;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gtrack{position:relative;height:1.15rem;background:var(--banda);border-radius:2px;overflow:hidden}
+.gfill{position:absolute;top:0;bottom:0;left:0;background:var(--acero);border-radius:2px;
+  min-width:3px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+.gbar.mayor .gfill{background:var(--obra)}
+.gbar.sincifra .gfill{background:repeating-linear-gradient(-45deg,var(--tinta-3) 0 4px,transparent 4px 8px);opacity:.45}
+.gval{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.8rem;
+  font-weight:600;color:var(--tinta);text-align:right;white-space:nowrap}
+@media (max-width:760px){
+  .gbar{grid-template-columns:7.5rem 1fr 4.2rem;gap:.5rem}
+  .gbl{font-size:.72rem}
+}
+@media print{.gfill{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
 /* ---------- dimensiones BIM ---------- */
 .dims{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--linea);border:1px solid var(--linea)}
 .dim{background:var(--sup);padding:1rem 1.05rem}
@@ -267,7 +309,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   .barra-nav{display:none}
   .barra-app{margin-left:auto}
   .masthead{grid-template-columns:1fr;gap:1rem}
-  .retrato{width:6.5rem;height:6.5rem}
+  .retrato{width:8rem;height:9rem}
   .puesto{grid-template-columns:1fr;gap:.9rem}
   .ledger{flex-direction:row;flex-wrap:wrap;gap:.3rem 1.3rem}
 }
@@ -297,7 +339,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 <div class="hoja">
 
 <header class="masthead">
-  <img class="retrato" src="foto.jpg" alt="Alex Andree Velásquez Ortiz" width="136" height="136">
+  <img class="retrato" src="foto.jpg" alt="Alex Andree Velásquez Ortiz" width="200" height="224">
   <div>
     <p class="diana">Gerente BIM / VDC &middot; Fast-track &middot; Contratos NEC &middot; IA aplicada a la construcción</p>
     <h1 class="nombre">Alex Andree Velásquez Ortiz</h1>
@@ -382,24 +424,24 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 
       <div class="gfila">
         <div class="gnom"><b>China Road &amp; Bridge</b><span>Gerente BIM/VDC</span></div>
-        <div class="gpista"><div class="gbarra act" style="left:96.7%;right:0"><span>III-1</span></div>
+        <div class="gpista gbar-act"><div class="gbarra act" style="left:96.7%;right:0"></div><b class="getiq fin" style="left:100%">Hospital III-1</b>
           <div class="ghoy" style="right:0"></div></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Consorcio S&amp;F</b><span>Gestor BIM/VDC · Ica</span></div>
-        <div class="gpista"><div class="gbarra" style="left:86.3%;width:9.8%"><span>S/ 800 MM</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:86.3%;width:9.8%"></div><b class="getiq" style="left:86.3%">S/ 800 MM</b></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Consorcio Suyay II</b><span>Coordinador → BIM Manager</span></div>
-        <div class="gpista"><div class="gbarra" style="left:60.2%;width:25.5%"><span>Paquete 7 · ARCC-ANIN</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:60.2%;width:25.5%"></div><b class="getiq" style="left:60.2%">Paquete 7 · ARCC (ANIN) · S/ 690 MM</b></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>AddBIM · México</b><span>Coordinador BIM</span></div>
-        <div class="gpista"><div class="gbarra" style="left:54.9%;width:5.3%"><span>General Motors</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:54.9%;width:5.3%"></div><b class="getiq" style="left:54.9%">General Motors · 7.500 m²</b></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Osiris Building Group</b><span>Junior → Coordinador</span></div>
-        <div class="gpista"><div class="gbarra" style="left:43.1%;width:11.2%"><span>Edificación</span></div></div>
+        <div class="gpista"><div class="gbarra" style="left:43.1%;width:11.2%"></div><b class="getiq" style="left:43.1%">Edificación</b></div>
       </div>
       <div class="gfila">
         <div class="gnom"><b>Consorcio SAHER</b><span>Sacyr–Herdoiza · Cadista</span></div>
@@ -419,7 +461,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
       </div>
       <div class="gfila">
         <div class="gnom"><b>Asistencia de proyectos</b><span>Topografía y planos</span></div>
-        <div class="gpista"><div class="gbarra suave" style="left:0;width:15.1%"><span>Cadista</span></div></div>
+        <div class="gpista"><div class="gbarra suave" style="left:0;width:15.1%"></div><b class="getiq" style="left:0">Cadista y topografía</b></div>
       </div>
     </div>
   </div>
@@ -577,6 +619,18 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
     <button class="filtro" type="button" data-f="salud" aria-pressed="false">Salud <span class="cuenta">5</span></button>
   </div>
 
+  <div class="panel">
+    <div><span class="pv" id="p-n">8</span><span class="pk">Proyectos</span></div>
+    <div><span class="pv" id="p-mm">4.896<small> MM</small></span><span class="pk">Soles</span></div>
+    <div><span class="pv" id="p-us">1.274<small> MM</small></span><span class="pk">Dólares</span></div>
+    <div><span class="pv" id="p-may">3.400<small> MM</small></span><span class="pk">Mayor proyecto</span></div>
+  </div>
+
+  <div class="grafico">
+    <p class="gtit"><span>Presupuesto por proyecto</span><span>Escala real &middot; S/ millones</span></p>
+    <div id="g-barras"></div>
+  </div>
+
   <div class="tablawrap">
     <table id="tabla-cartera">
       <thead>
@@ -721,35 +775,78 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 </div>
 
 <script>
-/* Filtrar la cartera. El total del pie se recalcula con lo que queda a la
-   vista: un filtro que deja el total de todo miente sobre lo que enseña. */
+/* La cartera como cuadro de mando: los filtros mueven el panel, las barras y
+   la tabla a la vez. Un filtro que deja el total de todo mientras enseña tres
+   filas miente sobre lo que se está viendo. */
 (function () {
   var tabla = document.getElementById('tabla-cartera');
   if (!tabla) return;
   var filas = Array.prototype.slice.call(tabla.tBodies[0].rows);
   var botones = Array.prototype.slice.call(document.querySelectorAll('.filtro'));
+  var caja = document.getElementById('g-barras');
+  var pN = document.getElementById('p-n');
+  var pMM = document.getElementById('p-mm');
+  var pUS = document.getElementById('p-us');
+  var pMay = document.getElementById('p-may');
   var pieMM = document.getElementById('pie-mm');
   var pieUS = document.getElementById('pie-us');
   var pieLab = document.getElementById('pie-label');
 
+  var datos = filas.map(function (f) {
+    return {
+      nombre: f.cells[0].textContent.trim(),
+      mm: parseFloat(f.dataset.mm) || 0,
+      us: parseFloat(f.dataset.us) || 0,
+      tags: ' ' + f.dataset.t + ' ',
+      fila: f
+    };
+  });
+
   function mil(n) {
-    // Miles con punto y decimal con coma, como el resto de la página.
     var e = (Math.round(n * 10) / 10).toString().split('.');
-    return e[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (e[1] ? ',' + e[1] : '');
+    var ent = e[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return ent + (e[1] ? ',' + e[1] : '');
+  }
+  function conMM(n) { return mil(n) + '<small> MM</small>'; }
+
+  function pintar(vis) {
+    var tope = 0;
+    vis.forEach(function (d) { if (d.mm > tope) tope = d.mm; });
+    var html = vis.map(function (d) {
+      var pct = tope > 0 ? (d.mm / tope) * 100 : 0;
+      var sin = d.mm === 0;
+      var cls = 'gbar' + (!sin && d.mm === tope ? ' mayor' : '') + (sin ? ' sincifra' : '');
+      var ancho = sin ? 100 : pct;
+      return [
+        '<div class="', cls, '">',
+        '<span class="gbl" title="', d.nombre, '">', d.nombre, '</span>',
+        '<span class="gtrack"><span class="gfill" style="width:', ancho, '%"></span></span>',
+        '<span class="gval">', (sin ? 's/d' : mil(d.mm)), '</span>',
+        '</div>'].join('');
+    });
+    caja.innerHTML = html.join('');
   }
 
   function aplicar(f) {
-    var mm = 0, us = 0, n = 0;
-    filas.forEach(function (fila) {
-      var ok = f === 'todos' || (' ' + fila.dataset.t + ' ').indexOf(' ' + f + ' ') > -1;
-      fila.hidden = !ok;
-      if (ok) { mm += parseFloat(fila.dataset.mm) || 0; us += parseFloat(fila.dataset.us) || 0; n++; }
+    var vis = [];
+    datos.forEach(function (d) {
+      var ok = f === 'todos' || d.tags.indexOf(' ' + f + ' ') > -1;
+      d.fila.hidden = !ok;
+      if (ok) vis.push(d);
     });
-    pieMM.textContent = mil(mm);
-    pieUS.textContent = mil(us);
-    pieLab.textContent = f === 'todos'
-      ? 'Total documentado'
-      : n + (n === 1 ? ' proyecto' : ' proyectos') + ' · subtotal';
+    var tMM = 0, tUS = 0, may = 0;
+    vis.forEach(function (d) {
+      tMM += d.mm; tUS += d.us; if (d.mm > may) may = d.mm;
+    });
+    pN.textContent = vis.length;
+    pMM.innerHTML = conMM(tMM);
+    pUS.innerHTML = conMM(tUS);
+    pMay.innerHTML = may > 0 ? conMM(may) : '\u2014';
+    pieMM.textContent = mil(tMM);
+    pieUS.textContent = mil(tUS);
+    pieLab.textContent = f === 'todos' ? 'Total documentado'
+      : vis.length + (vis.length === 1 ? ' proyecto' : ' proyectos') + ' \u00b7 subtotal';
+    pintar(vis);
     botones.forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.f === f));
     });
@@ -758,5 +855,6 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   botones.forEach(function (b) {
     b.addEventListener('click', function () { aplicar(b.dataset.f); });
   });
+  aplicar('todos');   // el cuadro arranca pintado, no en blanco
 })();
 </script>
