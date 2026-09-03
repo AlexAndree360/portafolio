@@ -223,7 +223,44 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
 }
 .abrir:hover{background:var(--obra);color:#fff}
 @media print{.abrir{display:none}}
+
+/* ---------- barra de acceso ----------
+   Va arriba y se queda: entrar a la app es lo que mas se repite y no puede
+   depender de bajar hasta la ficha del producto. */
+.barra{position:sticky;top:0;z-index:30;background:var(--papel);border-bottom:1px solid var(--linea)}
+.barra-in{max-width:64rem;margin:0 auto;padding:.6rem 2rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+.barra-id{font-family:var(--display);font-weight:600;font-size:.86rem;color:var(--acero);white-space:nowrap}
+.barra-id em{font-style:normal;font-family:var(--mono);font-size:.65rem;color:var(--tinta-3);margin-left:.4rem}
+.barra-nav{display:flex;gap:1.1rem;margin-left:auto;flex-wrap:wrap}
+.barra-nav a{font-family:var(--mono);font-size:.69rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--tinta-2);text-decoration:none;padding:.25rem 0;border-bottom:1px solid transparent;
+  transition:color .15s,border-color .15s}
+.barra-nav a:hover{color:var(--obra);border-bottom-color:var(--obra)}
+.barra-app{font-family:var(--mono);font-size:.69rem;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--obra);color:#fff;text-decoration:none;padding:.44rem .85rem;border-radius:2px;
+  white-space:nowrap;transition:background .15s}
+.barra-app:hover{background:var(--obra-s);color:#fff}
+.hoja{padding-top:2.4rem}
+@media (max-width:760px){
+  .barra-in{padding:.55rem 1.15rem;gap:.6rem}
+  .barra-nav{display:none}
+  .barra-app{margin-left:auto}
+}
+@media print{.barra{display:none}}
 </style>
+
+<nav class="barra">
+  <div class="barra-in">
+    <span class="barra-id">Alex Velásquez Ortiz<em>CIP 248987</em></span>
+    <div class="barra-nav">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#obras">Obras</a>
+      <a href="#proyectos">Proyectos</a>
+    </div>
+    <a class="barra-app" href="https://workcontrol-aavo.vercel.app" target="_blank" rel="noopener">Entrar a Valhalla &#8599;</a>
+  </div>
+</nav>
 
 <div class="hoja">
 
@@ -268,7 +305,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   <div><span class="n">3D<small>—8D</small></span><span class="k">Dimensiones aplicadas</span></div>
 </div>
 
-<section>
+<section id="trayectoria">
   <h2>Trayectoria <em>2017 — 2026 · a escala</em></h2>
   <div class="gantt">
     <div class="gantt-in">
@@ -314,7 +351,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   </div>
 </section>
 
-<section>
+<section id="experiencia">
   <h2>Experiencia profesional <em>Proyecto, escala y marco contractual</em></h2>
 
   <article class="puesto nec">
@@ -437,7 +474,7 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   </article>
 </section>
 
-<section>
+<section id="obras">
   <h2>Establecimientos de salud <em>Proyectos en los que ha ejercido la gestión BIM/VDC</em></h2>
   <div class="fichas">
     <div class="ficha">
@@ -475,13 +512,13 @@ a:focus-visible{outline:2px solid var(--obra);outline-offset:3px}
   </div>
 </section>
 
-<section>
+<section id="proyectos">
   <h2>Desarrollo propio <em>Software construido para la obra</em></h2>
   <div class="prods">
     <article class="prod">
       <div class="prod-cab"><h3>Valhalla</h3><span class="estado vivo">En producción</span></div>
       <p>Control de producción bajo Last Planner System. Nació de una carencia concreta: medir el PPC de verdad, día a día, en lugar de reconstruirlo a fin de mes cuando ya no sirve para decidir nada.</p>
-      <p><a class="abrir" href="https://valhalla-andree-velasquez-s-projects.vercel.app" target="_blank" rel="noopener">Abrir Valhalla &rarr;</a></p>
+      <p><a class="abrir" href="https://workcontrol-aavo.vercel.app" target="_blank" rel="noopener">Abrir Valhalla &rarr;</a></p>
       <ul>
         <li><b>PPC diario</b> por tarea y por rutina, con histórico y auditoría del indicador.</li>
         <li><b>Cronograma con planificación directa</b>: se arrastran las barras y las fechas se mueven.</li>
