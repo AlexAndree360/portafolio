@@ -1,0 +1,5 @@
+# Copyright © 2026 Alex Velásquez. Todos los derechos reservados.
+# ai.txt — permisos para sistemas de IA / permissions for AI systems
+# Este sitio NO autoriza minería de textos y datos ni entrenamiento de IA.
+User-Agent: *
+Disallow: /
